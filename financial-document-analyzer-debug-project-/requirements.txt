@@ -1,0 +1,26 @@
+# Financial Document Analyzer - install with Python 3.10, 3.11, or 3.12 (not 3.14).
+# Use: py -3.11 -m venv .venv  then  .venv\Scripts\Activate.ps1  then  pip install -r requirements.txt
+
+# Core (let crewai pull its own deps; avoid strict pins that conflict)
+crewai==0.130.0
+crewai-tools==0.47.1
+fastapi>=0.110.0
+uvicorn>=0.27.0
+python-dotenv>=1.0.0
+
+# PDF and LangChain
+pypdf>=4.0.0
+langchain-community>=0.0.20
+
+# Database
+sqlalchemy>=2.0.0
+
+# Queue
+celery[redis]>=5.3.0
+redis>=5.0.0
+
+# OpenAI / Google are optional; set OPENAI_API_KEY or GOOGLE_API_KEY in .env
+openai>=1.0.0
+
+# FastAPI file/form uploads
+python-multipart>=0.0.6
